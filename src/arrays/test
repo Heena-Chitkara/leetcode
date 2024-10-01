@@ -1,0 +1,18 @@
+
+
+
+
+		String[] strs = {"eat","tea","tan","ate","nat","bat"};
+		
+		//sorting
+		Map<String,List<String>> map = new HashMap<>();
+		for(String str : strs){
+		String sortedKey = Arrays.sort(str);
+		if(map.get(sortedKey)!=null){
+			map.put(sortedKey, map.get(sortedKey).add(str));
+			}
+			
+			else
+			map.put(sortedKey, new LinkedList<String>(str));
+		
+		}
